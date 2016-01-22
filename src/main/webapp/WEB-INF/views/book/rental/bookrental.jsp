@@ -16,13 +16,13 @@
 <table border="1" class="rental">
 	 
 	<tr>
-		<td>등록번호</td><td>서명</td><td>출판사</td><td>저자</td><td>ISBN</td><td>입고날짜</td>
+		<td>도서 이미지</td><td>서명</td><td>출판사</td><td>저자</td><td>ISBN</td><td>입고날짜</td>
 	</tr>
 	<c:forEach items="${list}" var="dto" varStatus="status">
 	<tr  onmousemove="this.style.background='orange'"
 		 onmouseout="this.style.background='white'"	>
 		
-		<td>${dto.book_num}</td>
+		<td>도서이미지</td>
 		<td><a href="bookinfo?book_num=${dto.book_num}">${dto.book_title}</td>
 		<td>${dto.book_label}</td>
 		<td>${dto.book_author}</td>

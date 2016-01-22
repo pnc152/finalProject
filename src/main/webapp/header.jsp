@@ -54,7 +54,16 @@ Modernizr.load({
 	}
 </script>
 
-
+<script>
+	function fnTest3(email){//로그인 한 상태에서 게시판 접근할수게 해주는 소스코드
+		if(email==null){
+			alert("로그인이 필요한 서비스입니다.")
+			
+		}else if(email!=null){
+			location.href="condition.book";
+		}
+	}
+</script>
 
 
 <!-- step1부분 function들 -->
@@ -171,7 +180,7 @@ Modernizr.load({
       <ul class="sf-menu">
         <li><a href="intro.jsp"><font color="#E8CEC2"; >아카데미
                         소개</font></a></li>
-               <li><a href="condition.book"><font color="#E8CEC2"; >도서
+               <li><a href="condition.book" onclick="fnTest3(${email})"><font color="#E8CEC2"; >도서
                         검색 및 대여</font></a></li>
                <li><a href="list.board"><font color="#E8CEC2"; >게시판</font></a>
                   <ul class="dropdown" style="background-color: #2A2A2A">

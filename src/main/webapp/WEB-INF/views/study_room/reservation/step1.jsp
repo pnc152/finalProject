@@ -52,13 +52,13 @@
 
 			<p class="calendarP">
 				<label><h3>예약하실 날짜를 선택해 주세요</h3></label> 
-				<input type="date"	name="reservation_date" id="day" class="calendar" />
+				<input type="date"	name="reservation_date" id="day" class="calendar" style="width: 500px; margin-left: 500px;"/>
 					
 			</p>
-
+<hr />
 			<p>
-			<fieldset>
-				<label for="files"><h3>사용 시간 설정</h3></label> <select
+			<fieldset style="width: 500px; margin-right: 23px;">
+				<label for="files" ><h3>사용 시간 설정</h3></label> <select
 					name="reservation_time" id="files">
 					<optgroup label="morning">
 						<option value="08:00~10:00">08:00~10:00</option>

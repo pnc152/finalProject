@@ -14,49 +14,53 @@
 <%@include file="/header.jsp"%>
 <body>
 <div class="orange_box" style="padding-left: 260px; padding-top: 20px; padding-bottom: 20px">
-	<p>	
-			<label>
-				도서명 : <br/>
-				<input type="text" name="book_title" id="book_title" value="${dto.getBook_title()}" readonly="readonly" style="width: 500px; height:30px;"/>
-			</label>
-		</p>
-		<p>
-			<label>
-				출판사 : <br/>
-				<input type="text" name="book_label" id="book_label" value="${dto.getBook_label()}" readonly="readonly" style="width: 500px; height:30px;"/>
-			</label>
-		</p>
-		<p>
-			<label>
-				저자 : <input type="text" name="book_author" id="book_author" value="${dto.getBook_author()}" readonly="readonly" style="width: 500px; height:30px;"/>
-			</label>
-		</p>
-		<p>
-			<label>
-				장르 : <input type="text" name="book_genre" id="book_genre" value="${dto.getBook_genre()}" readonly="readonly" style="width: 500px; height:30px;"/>
-			</label>
-		</p>
-		<p>
-			<label>
-				ISBN : <input type="text" name="book_isbn" id="book_isbn" value="${dto.getBook_isbn()}" readonly="readonly" style="width: 500px; height:30px;"/>
-			</label>
-		</p>
-		<p>
-			<label>
-				파일 :<input type="text" name="book_img" id="book_img" readonly="readonly" style="width: 500px; height:30px;"/><br/><br/>
-			</label>
-		</p>
-		<p>
-			<label>
-				청구기호 :<input type="text" name="book_chunggu" id="book_chunggu" value="${dto.getBook_chunggu()}" readonly="readonly" style="width: 500px; height:30px;"/><br/><br/>
-			</label>
-		</p>
-		<p>
-			<label>
-				소장위치 :<input type="text" name="book_loc" id="book_loc" value="${dto.getBook_loc()}" readonly="readonly" style="width: 500px; height:30px;"/><br/><br/>
-			</label>
-		</p>
-		
+
+		<div class="container" style="float: left;" >
+			도서 이미지 출력위치
+			${dto.getBook_img()}
+		</div>
+		<div style="float: left; margin-left: 40px;">
+			<!-- 출력 테이블 -->
+			<link href="/data/201012/IJ12937886903109/product.css"
+				rel="stylesheet" type="text/css" />
+			<div class="container">
+				<div class="wrap">
+					<table cellspacing="0" cellpadding="0" border="0" width="600">
+						<tbody>
+							
+							<tr>
+								<td colspan="2" class="r_name no_line">도서명 : ${dto.getBook_title()}</td>
+							</tr>
+							
+							<tr>
+								<td colspan="2">출판사 : ${dto.getBook_label()}</td>
+							</tr>
+							
+							<tr>
+								<td colspan="2" class="r_name">저자 : ${dto.getBook_author()}</td>
+							</tr>
+							
+							<tr>
+								<td colspan="2">장르 : ${dto.getBook_genre()}</td>
+							</tr>
+							
+							<tr>
+								<td colspan="2" class="r_name">ISBN : ${dto.getBook_isbn()}</td>
+							</tr>
+																					
+							<tr>
+								<td colspan="2" >청구기호 : ${dto.getBook_chunggu()}</td>
+							</tr>
+							
+							<tr>
+								<td colspan="2" class="r_name">소장위치 : ${dto.getBook_loc()}</td>
+							</tr>
+							
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
 		
 		<br/><br/><br/><br/><br/>
 		<form action="res.book" method="get">
